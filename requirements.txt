@@ -1,0 +1,4 @@
+pylint #noDeploy
+boto3 #noDeploy
+botocore #noDeploy
+geoip2==3.0.0

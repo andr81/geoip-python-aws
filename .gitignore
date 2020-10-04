@@ -127,3 +127,12 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+node_modules/
+.Ds_Store
+package.json
+package-lock.json
+.serverless/
+.vscode/
+
+GeoLite2-City.mmdb
