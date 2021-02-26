@@ -20,7 +20,6 @@ provider:
   runtime: python3.8
   stage: ${opt:stage, 'prod'}
   region: us-east-1
-  iamRoleStatements:
 
 
 package:
@@ -40,11 +39,8 @@ functions:
   geoip:
     handler: src/handler.geoip
     memorySize: 128
-    timeout: 30
+    timeout: 5
     events:
-      - http: GET geoip
-
-resources:
-  Resources:
-
-    
+      - httpApi:
+          method: GET
+          path: /geoip
